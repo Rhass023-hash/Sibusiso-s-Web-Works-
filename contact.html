@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sibusiso's Web Works</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+    <h1>Sibusiso's Web Works</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact">
+    <h2>Tell Us About Your Website</h2>
+    <p>Fill in the form below and describe the website you want.</p>
+
+<form action="https://formspree.io/f/xeepwryp" method="POST">
+         <input type="hidden" name="_subject" value="New Website Request!">
+<input type="hidden" name="_redirect" value="https://Sibusiso's Web Works.com/thankyou.html">
+        <input type="text" name="name" placeholder="Your Name" required>
+        
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <select name="package" required>
+            <option value="">Select Package</option>
+            <option value="Full Website - R2500">Full Website - R2500</option>
+            <option value="One Page Website - R1500">One Page Website - R1500</option>
+        </select>
+
+        <textarea name="message" rows="6" placeholder="Describe your website (business type, pages, colors, features, etc.)..." required></textarea>
+
+        <button type="submit" class="btn">Send Request</button>
+
+    </form>
+</section>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/27XXXXXXXXX" class="whatsapp-btn" target="_blank">💬</a>
+
+<footer>
+    <p>We will contact you soon 🚀</p>
+</footer>
+
+</body>
+</html>
