@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sibusiso’s Web Works | Websites for Dunoon, Milnerton and Cape Town</title>
+<meta name="description" content="Affordable websites for local businesses. One-page sites from R500, full websites from R1000, Google setup included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#05070f; --paper:#f4f7ff; --muted:#4a5578;
+  --magenta:#e0138a; --navy:#0a1a4d; --blue:#1f5fff; --black:#05070f;
+  --grad:linear-gradient(120deg,var(--navy),var(--blue) 50%,var(--magenta));
+  --head:'Syne','Trebuchet MS',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:1.0625rem;-webkit-text-size-adjust:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1080px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:.6rem}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(244,247,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(5,7,15,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;gap:1rem}
+.logo{font-family:var(--head);font-weight:800;text-decoration:none;font-size:1.15rem}
+.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul{list-style:none;padding:0;display:flex;gap:1.3rem}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--magenta)}
+@media(max-width:640px){nav ul{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:var(--grad);background-size:200% 200%;animation:flow 14s ease-in-out infinite;padding:clamp(3.5rem,11vw,7.5rem) 0 clamp(4rem,12vw,8rem)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.28;background:#fff}
+.hero::before{width:380px;height:380px;right:-120px;top:-100px;animation:float 9s ease-in-out infinite}
+.hero::after{width:220px;height:220px;left:-70px;bottom:-80px;background:var(--black);opacity:.45;animation:float 11s ease-in-out infinite reverse}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.4rem,9vw,5.2rem);font-weight:800;max-width:15ch}
+.hero p{max-width:34rem;margin:1.2rem 0 2rem;font-size:1.15rem;opacity:.96}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid #fff;transition:transform .2s,box-shadow .2s;cursor:pointer;font-family:var(--body);font-size:1rem}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(5,7,15,.25)}
+.btn.solid{background:#fff;color:var(--ink)}
+.btn.ghost{background:transparent;color:#fff}
+.hero .in{opacity:0;transform:translateY(22px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .in:nth-child(2){animation-delay:.15s}.hero .in:nth-child(3){animation-delay:.3s}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes flow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(26px)}}
+
+section{padding:clamp(3rem,8vw,5.5rem) 0}
+.lead{color:var(--muted);max-width:36rem;margin-bottom:2.2rem}
+
+/* pricing */
+.plans{display:grid;gap:1.4rem;grid-template-columns:1fr 1.15fr;align-items:stretch}
+.plan{border-radius:24px;padding:2rem;border:2px solid var(--ink);background:#fff}
+.plan.full{background:var(--black);color:#fff;border-color:var(--black);position:relative;box-shadow:10px 10px 0 var(--magenta)}
+.plan h3{font-size:1.5rem}
+.price{font-family:var(--head);font-weight:800;font-size:3.2rem;margin:.4rem 0 1rem;line-height:1}
+.plan.full .price{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.plan ul{padding-left:1.1rem;display:grid;gap:.4rem;margin-bottom:1.6rem}
+.plan .btn{border-color:var(--ink);color:var(--ink);background:transparent}
+.plan.full .btn{background:#fff;color:var(--ink);border-color:#fff}
+@media(max-width:760px){.plans{grid-template-columns:1fr}.plan.full{box-shadow:6px 6px 0 var(--magenta)}}
+
+/* steps */
+.band{background:#e6edff}
+.steps{list-style:none;padding:0;counter-reset:s;display:grid;gap:1rem;grid-template-columns:repeat(3,1fr)}
+.steps li{counter-increment:s;padding:1.4rem;border-radius:18px;background:#fff;border-left:6px solid var(--blue)}
+.steps li:nth-child(2){border-color:var(--magenta)}.steps li:nth-child(3){border-color:var(--navy)}
+.steps li::before{content:counter(s);font-family:var(--head);font-weight:800;font-size:1.6rem;color:var(--blue);display:block}
+.steps li:nth-child(2)::before{color:var(--magenta)}.steps li:nth-child(3)::before{color:var(--navy)}
+.steps b{display:block;margin:.2rem 0}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* area + hours */
+.info{display:grid;gap:2rem;grid-template-columns:1fr 1fr}
+.info h3{margin-bottom:.6rem;font-size:1.3rem}
+.hours{list-style:none;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed rgba(5,7,15,.2)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem}
+.chips span{padding:.45rem 1rem;border-radius:999px;background:var(--grad);color:#fff;font-weight:700;font-size:.95rem}
+@media(max-width:760px){.info{grid-template-columns:1fr}}
+
+/* order */
+.order{background:var(--navy);color:#fff}
+.order .lead{color:#b9c6ee}
+form{display:grid;gap:1rem;max-width:620px}
+label{display:grid;gap:.35rem;font-weight:500}
+input,select,textarea{font:inherit;padding:.85rem 1rem;border-radius:12px;border:2px solid transparent;background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--magenta);outline:none}
+textarea{min-height:110px;resize:vertical}
+.row{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.order .btn{background:var(--grad);border-color:transparent;color:#fff;justify-self:start}
+.alt{margin-top:1.6rem;color:#b9c6ee}
+.alt a{color:#fff;font-weight:700}
+footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero .in{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Sibusiso’s <span>Web Works</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#where">Where &amp; when</a></li>
+        <li><a href="#order">Order</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1 class="in">Your business, online this week.</h1>
+      <p class="in">Fast, good-looking websites that work on every phone. Built for local businesses in Dunoon, Milnerton and Cape Town, with Google setup included so customers can find you.</p>
+      <div class="btns in">
+        <a class="btn solid" href="#order">Order your website</a>
+        <a class="btn ghost" href="https://wa.me/27733430842?text=Hi%20Sibusiso%2C%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="prices">
+    <div class="wrap">
+      <h2>Two simple prices</h2>
+      <p class="lead">No hidden fees. Both options include Google setup, so your business shows up when people search.</p>
+      <div class="plans">
+        <article class="plan">
+          <h3>One-page website</h3>
+          <div class="price">R500</div>
+          <ul>
+            <li>Everything on one scrolling page</li>
+            <li>Works on phones, tablets and computers</li>
+            <li>Contact buttons for call and WhatsApp</li>
+            <li>Google setup included</li>
+          </ul>
+          <a class="btn" href="#order" data-plan="One-page website (R500)">Choose one page</a>
+        </article>
+        <article class="plan full">
+          <h3>Full website</h3>
+          <div class="price">R1000</div>
+          <ul>
+            <li>3 or more pages (Home, About, Services, Contact and more)</li>
+            <li>Gradient colours and smooth animation to match your brand</li>
+            <li>Works on phones, tablets and computers</li>
+            <li>Google setup included</li>
+          </ul>
+          <a class="btn" href="#order" data-plan="Full website (R1000)">Choose full website</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">From first message to live website in three steps.</p>
+      <ol class="steps">
+        <li><b>Tell me about your business</b>Send your business name, what you sell and your contact details.</li>
+        <li><b>I build your website</b>You see the design and ask for changes until you are happy.</li>
+        <li><b>Go live on Google</b>Your site is published and set up so customers can find you.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="where">
+    <div class="wrap info">
+      <div>
+        <h3>Areas I serve</h3>
+        <div class="chips"><span>Dunoon</span><span>Milnerton</span><span>Cape Town</span></div>
+      </div>
+      <div>
+        <h3>When I’m available</h3>
+        <ul class="hours">
+          <li><span>Monday to Friday</span><b>15h00 – 21h00</b></li>
+          <li><span>Saturday and Sunday</span><b>10h00 – 16h00</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="wrap">
+      <h2>Order your website</h2>
+      <p class="lead">Fill in the form and your email app will open with your order ready to send. I will reply as soon as I can.</p>
+      <form id="orderForm">
+        <div class="row">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>Phone or WhatsApp<input name="phone" type="tel" required autocomplete="tel"></label>
+        </div>
+        <label>Business name<input name="business" required></label>
+        <label>Which website do you want?
+          <select name="plan" id="plan">
+            <option>One-page website (R500)</option>
+            <option>Full website (R1000)</option>
+          </select>
+        </label>
+        <label>Tell me about your business<textarea name="details" placeholder="What do you sell? Where are you? Any colours you like?"></textarea></label>
+        <button class="btn" type="submit">Send my order</button>
+      </form>
+      <p class="alt">Prefer to talk? Call <a href="tel:+27733430842">073 343 0842</a> or <a href="https://wa.me/27733430842" target="_blank" rel="noopener">message on WhatsApp</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Sibusiso’s Web Works · Dunoon, Cape Town</div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Pre-select the plan when a price button is tapped
+document.querySelectorAll('[data-plan]').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.getElementById('plan').value = b.getAttribute('data-plan');
+  });
+});
+
+// Open the email app with the order filled in
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target;
+  var body = 'Name: ' + f.name.value +
+    '\nPhone: ' + f.phone.value +
+    '\nBusiness: ' + f.business.value +
+    '\nWebsite: ' + f.plan.value +
+    '\n\nDetails:\n' + f.details.value;
+  window.location.href = 'mailto:sibusisobana7@gmail.com?subject=' +
+    encodeURIComponent('Website order: ' + f.business.value) +
+    '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
